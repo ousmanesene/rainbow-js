@@ -1,0 +1,23 @@
+{
+    "meal": {
+        "selectedIndex":1,
+        "options":[
+            {"value": "Croissant", "calories":437},
+            {"value": "Pains chocolat", "calories":3920},
+            {"value": "Chaus au P.", "calories":300},
+            {"value": "Beignets framboise 300G", "calories":870},
+            {"value": "Petit Beurre LU", "calories":36}
+        ]
+    },
+    "activities":{
+        "selectedIndex":1,
+        "options":[
+        {"value": "Jogging 7Km en 49min", "calories":456},
+            {"value": "Jogging 1h", "calories":527},
+            {"value": "Glander 1h", "calories":78},
+            {"value": "Faire les courses 1h", "calories":242},
+            {"value": "Marche (3 km/h) 1h", "calories":190},
+            {"value": "Marche (8 km/h) 1h", "calories":467}
+        ]
+    }
+}

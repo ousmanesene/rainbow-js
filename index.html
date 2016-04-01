@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>jsLib</title>
+    </head>
+    <body vm.bind="vm">
+        <div>
+            <label>input text: {{firstname}}</label>
+            <input type="text" value="{{firstname}}"/>
+        </div>
+        <div>
+            <label>input text same: {{firstname}}</label>
+            <input type="text" value="{{firstname}}"/>
+        </div>
+        <div>
+            <label>input password: {{password}}</label>
+            <input type="password" value="{{password}}"/>
+            <label>input password same: {{password}}</label>
+            <input type="password" value="{{password.confirm()}}"/>
+        </div>
+        <div>
+            <label>input email: {{email}}</label>
+            <input type="email" value="{{email}}"/>
+            <label>input email same: {{email}}</label>
+            <input type="email" value="{{email.confirm().isEmail()}}"/>
+        </div>
+        <div>
+            <label>checkbox: {{checkbox}}
+                <input type="checkbox" value="{{checkbox}}"/>
+            </label>
+        </div>
+        <div>
+            <label>checkbox group #1: {{checkboxes[0]}}
+                <input type="checkbox" value="{{checkboxes[0]}}"/>
+            </label>
+            <label>checkbox group #2: {{checkboxes[1]}}
+                <input type="checkbox" value="{{checkboxes[1]}}"/>
+            </label>
+        </div>
+        <div>
+            <label>radio: {{radio}}</label>
+            <input type="radio" value="{{radio}}"/>
+        </div>
+        <div>
+            <label>radio group #1: {{radios[0]}}</label>
+            <input type="radio" name="myRadio" value="{{radios[0]}}"/>
+            <label>radio group #2: {{radios[1]}}</label>
+            <input type="radio" name="myRadio" value="{{radios[1]}}"/>
+        </div>
+        <div>
+            <label>select: {{select.options[select.selectedIndex].value}}</label>
+            <select>
+                {{#select.options}}
+                    <option>{{value}}</option>
+                {{/select}}
+            </select>
+        </div>
+    </body>
+    <script type="text/javascript" src="./dist/rainbowJs.alpha1.min.js"></script>
+    <script type="text/javascript" src="test.js"></script>
+</html>

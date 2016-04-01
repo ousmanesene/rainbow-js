@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>jsLib</title>
+    </head>
+    <body vm.bind="vm">
+        <div class="infos" style="display:none">
+            <div>
+                <label>Need kcal per day: {{neededCal}}</label>
+            </div>
+            <div>
+                <label>Best weight (kg): {{bestWeight}}</label>
+            </div>
+            <div>
+                <label>Actual weight:</label>
+                <input type="text" value="{{actualWeight}}"/>
+            </div>
+        </div>
+        <div>
+            <label>Activity: </label>
+            <select>
+                {{#activities.options}}
+                    <option>{{value}}</option>
+                {{/activities.options}}
+            </select>
+            <button onclick="pml.addActivity()">Add</button>
+        </div>
+        <div class="change">
+            <div>
+                <label>Balance for today: {{balance}}</label>
+            </div>
+            <div>
+                <label>Used kcal today: {{usedCal}}</label>
+            </div>
+            <div>
+                <label>Saved kcal today: {{savedCal}}</label>
+            </div>
+        </div>
+        <div>
+            <label>Meal: </label>
+            <select>
+                {{#meal.options}}
+                    <option>{{value}}</option>
+                {{/meal.options}}
+            </select>
+            <button onclick="pml.addMeal()">Add</button>
+        </div>
+    </body>
+    <script type="text/javascript" src="./lib/RainbowTools.js"></script>
+    <script type="text/javascript" src="./lib/RainbowRequest.js"></script>
+    <script type="text/javascript" src="./lib/RainbowDom.js"></script>
+    <script type="text/javascript" src="./lib/jsLib.js"></script>
+    <script type="text/javascript" src="pml.js"></script>
+</html>
