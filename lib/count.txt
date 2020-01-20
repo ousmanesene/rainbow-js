@@ -1,0 +1,7 @@
+Total => 859 lines
+IFML.js => 142 lines
+RainbowTemplate.js => 59 lines --> 147 lines
+jsLib.js => 38 lines
+RainbowRequest.js => 78 lines --> 90 lines
+RainbowTools.js => 242 lines
+RainbowDom.js => 400 lines

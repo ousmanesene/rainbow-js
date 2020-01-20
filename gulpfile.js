@@ -4,8 +4,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 
-gulp.task('default', ['lint', 'babel']);
-
 gulp.task('lint', function() {
     return gulp.src('./lib/*.js')
     .pipe(jshint())
@@ -22,3 +20,5 @@ gulp.task('babel', function(){
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist'));
 });
+
+gulp.task('default', gulp.series('lint', 'babel'));
